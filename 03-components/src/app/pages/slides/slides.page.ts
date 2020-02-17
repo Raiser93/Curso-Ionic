@@ -7,6 +7,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./slides.page.scss'],
 })
 export class SlidesPage implements OnInit {
+  ocultar = '';
 
   slides: { img: string, titulo: string, desc: string }[] = [
     {
@@ -37,6 +38,7 @@ export class SlidesPage implements OnInit {
   }
 
   onClick() {
+    this.ocultar = 'animated fadeOut fast';
     this.navCtrl.navigateBack('/');
   }
 
